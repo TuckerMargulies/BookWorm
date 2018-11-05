@@ -8,8 +8,8 @@ class Demo extends Component {
   render() {
     return (
       <BarcodePicker
-        playSoundOnScan={true}
-        vibrateOnScan={true}
+        playSoundOnScan={false}
+        vibrateOnScan={false}
         scanSettings={
           new ScanSettings({
             enabledSymbologies: ["qr", "ean8", "ean13", "upca", "upce", "code128", "code39", "code93", "itf"],
@@ -34,4 +34,20 @@ class Demo extends Component {
   }
 }
 
+function bookSearch(){
+  var search = document.getElementById('scandit-barcode-result').value
+  console.log(document.getElementById('scandit-barcode-result').value)
+  $.ajax({
+    url: "https://www.googleapis.com/book/v1/isbn?q=" + search,
+    dataType: "json",
+
+    success: function(data) {
+      console.log(data)
+    },
+    type: 'GET'
+  });
+}
+
+document.getElementById('scandit-barcode-result').addEventListener('click', bookSearch, false)
+console.log(document.getElementById('scandit-barcode-result'))
 render(<Demo />, document.querySelector("#demo"));
