@@ -1,13 +1,11 @@
-This repository contains samples that show how to use the Scandit Barcode Scanner SDK for the Web.
+# React Demo - Scandit Web SDK
 
-# Scandit Barcode Scanner SDK for the Web
+This project is based on (and requires) `nwb`, you can install it by running `npm i -g nwb`.
 
-Enterprise barcode scanning performance in your browser via JavaScript and WebAssembly.
+## Development server
 
-Made by [Scandit](https://www.scandit.com)
+Run `npm start` for a dev server. Navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source files.
 
-Access cameras available on the devices for video input, display a barcode picker interface, configure in-depth settings for barcode symbologies and performance, and let users easily scan barcodes in your web application.
+## Build
 
-To use the library you must possess a valid Scandit account and license key. You can register for a free trial [here](https://ssl.scandit.com/customers/new?p=test&source=websdk).
-
-**_An updated in-depth documentation of all of the libraries' specifications and functionalities can be found at [https://docs.scandit.com/stable/web](https://docs.scandit.com/stable/web)._**
+Run `npm build` to build the project.
