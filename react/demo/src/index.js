@@ -29,6 +29,10 @@ class Demo extends Component {
               dataType: "json",
 
               success: function(data) {
+
+                for (let i = 0; i < data.items.length; i++){
+                  document.getElementById('scandit-barcode-result').innerHTML += "<h2>" + data.items[i].volumeInfo.title + "</h2>"
+                }
                 console.log("https://www.googleapis.com/books/v1/volumes?q=isbn:" + search)
                 console.log("google books data " + JSON.stringify(data))
               },
